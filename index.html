@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flexbox布局</title>
+	<style type="text/css">
+	    html,body,div
+	    {
+	    	margin: 0;
+	    	padding: 0;
+	    }
+		.container
+		{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: 100%;
+			border: solid 1px #999;
+			box-sizing: border-box;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.wrap
+		{
+			padding:20px;
+		}
+		.item
+		{
+			width: 150px;
+			height: inherit;
+			border: solid 1px #f00;
+			box-sizing: border-box;
+		}
+		#item-4
+		{
+			border: solid 1px #00f;
+		}
+		#wrap-1
+		{
+			height: 120px;
+			order: 1;
+		}
+		#wrap-2
+		{
+			height: 100px;
+			order: 2
+		}
+		#wrap-3
+		{
+			height: 40px;
+			order: 3;
+		}
+		#wrap-4
+		{
+			height: 200px;
+			order: 4;
+		}
+		@media screen and (max-width: 760px){
+
+			.container
+			{
+				align-items: flex-start;
+				align-content: flex-start;
+				justify-content: flex-start;
+			}
+			#wrap-4
+			{
+				order: -1;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="wrap" id="wrap-1"><div class="item" id="item-1"></div></div>
+	<div class="wrap" id="wrap-2"><div class="item" id="item-2"></div></div>
+	<div class="wrap" id="wrap-3"><div class="item" id="item-3"></div></div>
+	<div class="wrap" id="wrap-4"><div class="item" id="item-4"></div></div>
+</div>
+</body>
+</html>
